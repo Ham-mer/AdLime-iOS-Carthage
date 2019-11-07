@@ -1,10 +1,13 @@
 //
 //  AdLimeNetwork.h
-//  Created by Matthew on 2019/6/15.
+//  Created by AdLimeSdk on 2019/6/15.
 //
 
 #import <Foundation/Foundation.h>
 
+/*!
+ Id of Network supported by SDK.
+ */
 typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     UNKNOWN = 0,
     ADCOLONY = 1,
@@ -40,12 +43,25 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
 	MAIO = 31,
     ALIGAMES = 32,
     CRITEO = 33,
-    ZHONGHUI_ADS = 34
+    ZHONGHUI_ADS = 34,
+    TMS = 35,
+    FIVE = 36,
 };
 
+/*!
+ Network supported by SDK.
+ */
 @interface AdLimeNetwork : NSObject
 
+/*!
+ @brief Id of Network.
+ @see AdLimeNetworkId
+ */
 @property int mid;
+
+/*!
+ @brief Name of Network.
+ */
 @property NSString *name;
 
 +(AdLimeNetwork *)fromId: (int) networkId;
